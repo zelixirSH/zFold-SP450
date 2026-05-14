@@ -1,0 +1,249 @@
+DETAILED ANALYSIS RESULTS
+Generated: 2025-11-19 18:18:43.118853
+================================================================================
+
+Method: zFold_uniref90_m2
+Directory: /sugon_store/zhengliangzhen/P450/structure_prediction/P450-2019Sept_dataset/zFold_uniref90_output_m2
+Total predictions: 73
+Average time: 437.43 minutes
+Total time: 31932.58 minutes (532.21 hours)
+
+Individual predictions:
+  6L39_A: 0.00 minutes
+  6M4P_A: 0.00 minutes
+  6M4S_A: 0.00 minutes
+  6T1T_A: 2618.18 minutes
+  6VBN_A: 0.00 minutes
+  6VBY_A: 2606.88 minutes
+  6VXV_A: 0.00 minutes
+  6VZA_A: 0.00 minutes
+  6VZB_A: 0.00 minutes
+  6XA2_A: 0.00 minutes
+  6XA3_A: 0.00 minutes
+  7AO7_A: 0.00 minutes
+  7AYX_A: 0.00 minutes
+  7DI3_A: 0.00 minutes
+  7DVO_A: 0.00 minutes
+  7EGN_A: 0.00 minutes
+  7OQ6_A: 0.00 minutes
+  7OW9_A: 0.00 minutes
+  7P5T_A: 0.00 minutes
+  7QKE_A: 0.00 minutes
+  7R1I_A: 0.00 minutes
+  7SHI_A: 0.00 minutes
+  7SUX_A: 2623.60 minutes
+  7TEF_A: 0.00 minutes
+  7TLO_A: 0.00 minutes
+  7TTB_A: 0.00 minutes
+  7TTO_A: 0.00 minutes
+  7V40_A: 0.00 minutes
+  7WDD_A: 0.00 minutes
+  7WDE_A: 0.00 minutes
+  7WZL_A: 2582.59 minutes
+  7X53_A: 0.00 minutes
+  7XBM_A: 0.00 minutes
+  7Y0P_A: 0.00 minutes
+  7Y0R_A: 0.00 minutes
+  7Y9J_A: 0.00 minutes
+  7YD9_A: 1911.71 minutes
+  7YDA_A: 1719.05 minutes
+  7YDB_A: 1631.19 minutes
+  7YDC_A: 1571.85 minutes
+  7YDD_A: 1470.70 minutes
+  7YDE_A: 1371.78 minutes
+  7YDL_A: 1303.83 minutes
+  7YFT_A: 1236.05 minutes
+  8A6W_B: 0.00 minutes
+  8CKN_A: 0.00 minutes
+  8EOH_A: 2325.34 minutes
+  8F91_A: 0.00 minutes
+  8GK3_A: 2194.25 minutes
+  8GTL_A: 0.00 minutes
+  8HG9_A: 0.00 minutes
+  8HNY_A: 0.00 minutes
+  8HO1_A: 0.00 minutes
+  8HOU_A: 0.00 minutes
+  8JNP_A: 0.00 minutes
+  8JRL_A: 0.00 minutes
+  8JUA_A: 0.00 minutes
+  8K1X_A: 0.00 minutes
+  8Q2F_A: 2147.46 minutes
+  8Q5J_A: 0.00 minutes
+  8Q6X_A: 0.00 minutes
+  8Q6Z_A: 0.00 minutes
+  8QZE_A: 0.00 minutes
+  8QZF_A: 0.00 minutes
+  8SPC_A: 0.00 minutes
+  8SWL_A: 0.00 minutes
+  8TWU_A: 0.00 minutes
+  8W72_A: 0.00 minutes
+  8W7G_A: 0.00 minutes
+  8YHN_A: 0.00 minutes
+  9CJG_A: 0.00 minutes
+  9EF0_A: 2618.04 minutes
+  9JQM_A: 0.00 minutes
+
+================================================================================
+
+Method: AF2_uniref90
+Directory: /sugon_store/zhengliangzhen/P450/structure_prediction/P450-2019Sept_dataset/zFold_uniref90_output
+Total predictions: 72
+Average time: 1095.57 minutes
+Total time: 78881.15 minutes (1314.69 hours)
+
+Individual predictions:
+  6L39_A: 1337.15 minutes
+  6M4P_A: 1222.82 minutes
+  6M4S_A: 1172.60 minutes
+  6T1T_A: 1106.82 minutes
+  6VBN_A: 983.80 minutes
+  6VBY_A: 1272.45 minutes
+  6VXV_A: 1287.27 minutes
+  6VZA_A: 1118.25 minutes
+  6VZB_A: 995.40 minutes
+  6XA2_A: 1237.30 minutes
+  6XA3_A: 1072.33 minutes
+  7AO7_A: 941.94 minutes
+  7AYX_A: 1215.30 minutes
+  7DI3_A: 1189.48 minutes
+  7DVO_A: 1108.85 minutes
+  7EGN_A: 1218.24 minutes
+  7OQ6_A: 1139.05 minutes
+  7OW9_A: 910.56 minutes
+  7P5T_A: 930.19 minutes
+  7QKE_A: 1202.25 minutes
+  7R1I_A: 1321.84 minutes
+  7SHI_A: 1017.14 minutes
+  7SUX_A: 1221.29 minutes
+  7TEF_A: 1229.08 minutes
+  7TLO_A: 1043.20 minutes
+  7TTB_A: 1080.32 minutes
+  7TTO_A: 1123.76 minutes
+  7V40_A: 1007.44 minutes
+  7WDD_A: 1009.73 minutes
+  7WDE_A: 967.44 minutes
+  7WZL_A: 1185.11 minutes
+  7X53_A: 1123.29 minutes
+  7XBM_A: 1206.81 minutes
+  7Y0P_A: 1129.59 minutes
+  7Y0R_A: 1228.21 minutes
+  7Y9J_A: 1304.69 minutes
+  7YD9_A: 1089.76 minutes
+  7YDA_A: 1301.20 minutes
+  7YDB_A: 245.69 minutes
+  7YDC_A: 1164.86 minutes
+  7YDD_A: 866.45 minutes
+  7YDE_A: 1102.56 minutes
+  7YDL_A: 902.36 minutes
+  8A6W_B: 1066.48 minutes
+  8CKN_A: 955.47 minutes
+  8EOH_A: 1186.60 minutes
+  8F91_A: 1059.33 minutes
+  8GK3_A: 872.11 minutes
+  8GTL_A: 967.25 minutes
+  8HG9_A: 990.64 minutes
+  8HNY_A: 1021.81 minutes
+  8HO1_A: 884.14 minutes
+  8HOU_A: 1086.63 minutes
+  8JNP_A: 1244.85 minutes
+  8JRL_A: 1171.30 minutes
+  8JUA_A: 1045.59 minutes
+  8K1X_A: 1145.29 minutes
+  8Q2F_A: 876.59 minutes
+  8Q5J_A: 1033.79 minutes
+  8Q6X_A: 1320.37 minutes
+  8Q6Z_A: 918.33 minutes
+  8QZE_A: 1256.20 minutes
+  8QZF_A: 1268.65 minutes
+  8SPC_A: 1040.74 minutes
+  8SWL_A: 1291.08 minutes
+  8TWU_A: 1156.13 minutes
+  8W72_A: 939.49 minutes
+  8W7G_A: 1055.51 minutes
+  8YHN_A: 992.24 minutes
+  9CJG_A: 1159.32 minutes
+  9EF0_A: 1088.82 minutes
+  9JQM_A: 1252.54 minutes
+
+================================================================================
+
+Method: AF3
+Directory: /sugon_store/zhengliangzhen/P450/structure_prediction/P450-2019Sept_dataset/AF2_uniref90_output
+Total predictions: 57
+Average time: 0.00 minutes
+Total time: 0.00 minutes (0.00 hours)
+
+Individual predictions:
+  6L39_A: 0.00 minutes
+  6M4P_A: 0.00 minutes
+  6M4S_A: 0.00 minutes
+  6VBN_A: 0.00 minutes
+  6VBY_A: 0.00 minutes
+  6VXV_A: 0.00 minutes
+  6VZB_A: 0.00 minutes
+  6XA2_A: 0.00 minutes
+  6XA3_A: 0.00 minutes
+  7AO7_A: 0.00 minutes
+  7AYX_A: 0.00 minutes
+  7DI3_A: 0.00 minutes
+  7DVO_A: 0.00 minutes
+  7OW9_A: 0.00 minutes
+  7P5T_A: 0.00 minutes
+  7QKE_A: 0.00 minutes
+  7R1I_A: 0.00 minutes
+  7SHI_A: 0.00 minutes
+  7SUX_A: 0.00 minutes
+  7TEF_A: 0.00 minutes
+  7TLO_A: 0.00 minutes
+  7TTB_A: 0.00 minutes
+  7TTO_A: 0.00 minutes
+  7WDD_A: 0.00 minutes
+  7X53_A: 0.00 minutes
+  7XBM_A: 0.00 minutes
+  7Y0P_A: 0.00 minutes
+  7YD9_A: 0.00 minutes
+  7YDB_A: 0.00 minutes
+  7YDD_A: 0.00 minutes
+  7YDL_A: 0.00 minutes
+  7YFT_A: 0.00 minutes
+  8A6W_B: 0.00 minutes
+  8CKN_A: 0.00 minutes
+  8F91_A: 0.00 minutes
+  8GK3_A: 0.00 minutes
+  8GTL_A: 0.00 minutes
+  8HG9_A: 0.00 minutes
+  8HNY_A: 0.00 minutes
+  8HO1_A: 0.00 minutes
+  8HOU_A: 0.00 minutes
+  8JUA_A: 0.00 minutes
+  8K1X_A: 0.00 minutes
+  8Q2F_A: 0.00 minutes
+  8Q6X_A: 0.00 minutes
+  8Q6Z_A: 0.00 minutes
+  8QZE_A: 0.00 minutes
+  8QZF_A: 0.00 minutes
+  8SPC_A: 0.00 minutes
+  8SWL_A: 0.00 minutes
+  8TWU_A: 0.00 minutes
+  8W72_A: 0.00 minutes
+  8W7G_A: 0.00 minutes
+  8YHN_A: 0.00 minutes
+  9CJG_A: 0.00 minutes
+  9EF0_A: 0.00 minutes
+  9JQM_A: 0.00 minutes
+
+================================================================================
+
+Method: SimpleFold_100M
+Directory: /sugon_store/zhengliangzhen/P450/structure_prediction/P450-2019Sept_dataset/AF2_af2msa_output
+Total predictions: 3
+Average time: 0.10 minutes
+Total time: 0.29 minutes (0.00 hours)
+
+Individual predictions:
+  6T1T_A: 0.00 minutes
+  7XBM_A: 0.15 minutes
+  8F91_A: 0.14 minutes
+
+================================================================================
+

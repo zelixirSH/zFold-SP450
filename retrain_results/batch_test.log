@@ -1,0 +1,216 @@
+2025-11-24 10:19:52,116 - INFO - 🚀 批量测试任务启动
+2025-11-24 10:19:52,116 - INFO - 配置: {'checkpoint_dir': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints', 'config': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs/experiment/test_p450_cystal.yaml', 'output_dir': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue', 'test_script': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py', 'num_samples': 10, 'log': 'batch_test.log', 'parallel': 1}
+2025-11-24 10:19:52,116 - INFO - 📂 扫描检查点目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints
+2025-11-24 10:19:52,117 - INFO - 找到 50 个检查点: model-best-step00005500-loss0.035267.ckpt → model-best-step00030000-loss0.029124.ckpt
+2025-11-24 10:19:52,117 - INFO - 🎲 抽取 10 个检查点:
+2025-11-24 10:19:52,117 - INFO -    - Step  5500: model-best-step00005500-loss0.035267.ckpt
+2025-11-24 10:19:52,117 - INFO -    - Step  8000: model-best-step00008000-loss0.034126.ckpt
+2025-11-24 10:19:52,117 - INFO -    - Step 10500: model-best-step00010500-loss0.032926.ckpt
+2025-11-24 10:19:52,117 - INFO -    - Step 13500: model-best-step00013500-loss0.032288.ckpt
+2025-11-24 10:19:52,117 - INFO -    - Step 16000: model-best-step00016000-loss0.031656.ckpt
+2025-11-24 10:19:52,117 - INFO -    - Step 19000: model-best-step00019000-loss0.030850.ckpt
+2025-11-24 10:19:52,117 - INFO -    - Step 21500: model-best-step00021500-loss0.030195.ckpt
+2025-11-24 10:19:52,117 - INFO -    - Step 24500: model-best-step00024500-loss0.029963.ckpt
+2025-11-24 10:19:52,118 - INFO -    - Step 27000: model-best-step00027000-loss0.029507.ckpt
+2025-11-24 10:19:52,118 - INFO -    - Step 30000: model-best-step00030000-loss0.029124.ckpt
+2025-11-24 10:19:52,118 - INFO - ============================================================
+2025-11-24 10:19:52,118 - INFO - 开始测试 Step  5500 | 检查点: model-best-step00005500-loss0.035267.ckpt
+2025-11-24 10:19:52,118 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/5500_step
+2025-11-24 10:19:52,151 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=/tmp/test_config_step_5500.yaml
+2025-11-24 10:20:04,679 - ERROR - ❌ Step  5500 测试失败
+2025-11-24 10:20:04,680 - ERROR - 错误输出: In 'base_eval.yaml': Could not find 'experiment//tmp/test_config_step_5500.yaml'
+
+Available options in 'experiment':
+	test
+	test_p450_cystal
+	train
+	train_fsdp
+	train_p450_cystal
+	train_p450_cystal_filter
+	train_p450_fungi_af
+	train_plddt
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=file:///sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs
+	provider=hydra-colorlog, path=pkg://hydra_plugins.hydra_colorlog.conf
+	provider=schema, path=structure
+2025-11-24 10:20:04,680 - INFO - ============================================================
+2025-11-24 10:20:04,680 - INFO - 开始测试 Step  8000 | 检查点: model-best-step00008000-loss0.034126.ckpt
+2025-11-24 10:20:04,680 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/8000_step
+2025-11-24 10:20:04,693 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=/tmp/test_config_step_8000.yaml
+2025-11-24 10:20:09,498 - ERROR - ❌ Step  8000 测试失败
+2025-11-24 10:20:09,498 - ERROR - 错误输出: In 'base_eval.yaml': Could not find 'experiment//tmp/test_config_step_8000.yaml'
+
+Available options in 'experiment':
+	test
+	test_p450_cystal
+	train
+	train_fsdp
+	train_p450_cystal
+	train_p450_cystal_filter
+	train_p450_fungi_af
+	train_plddt
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=file:///sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs
+	provider=hydra-colorlog, path=pkg://hydra_plugins.hydra_colorlog.conf
+	provider=schema, path=structure
+2025-11-24 10:20:09,499 - INFO - ============================================================
+2025-11-24 10:20:09,499 - INFO - 开始测试 Step 10500 | 检查点: model-best-step00010500-loss0.032926.ckpt
+2025-11-24 10:20:09,499 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/10500_step
+2025-11-24 10:20:09,512 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=/tmp/test_config_step_10500.yaml
+2025-11-24 10:20:13,885 - ERROR - ❌ Step 10500 测试失败
+2025-11-24 10:20:13,885 - ERROR - 错误输出: In 'base_eval.yaml': Could not find 'experiment//tmp/test_config_step_10500.yaml'
+
+Available options in 'experiment':
+	test
+	test_p450_cystal
+	train
+	train_fsdp
+	train_p450_cystal
+	train_p450_cystal_filter
+	train_p450_fungi_af
+	train_plddt
+Config search path:
+	provider=hydra, path=pkg://hydra.conf
+	provider=main, path=file:///sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs
+	provider=hydra-colorlog, path=pkg://hydra_plugins.hydra_colorlog.conf
+	provider=schema, path=structur
+2025-11-24 10:20:13,886 - INFO - ============================================================
+2025-11-24 10:20:13,886 - INFO - 开始测试 Step 13500 | 检查点: model-best-step00013500-loss0.032288.ckpt
+2025-11-24 10:20:13,886 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/13500_step
+2025-11-24 10:20:13,897 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=/tmp/test_config_step_13500.yaml
+2025-11-24 10:23:33,538 - INFO - 🚀 批量测试任务启动
+2025-11-24 10:23:33,538 - INFO - 配置: {'checkpoint_dir': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints', 'config': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs/experiment/test_p450_cystal.yaml', 'output_dir': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue', 'test_script': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py', 'num_samples': 10, 'log': 'batch_test.log', 'config_name': 'test_p450_cystal'}
+2025-11-24 10:23:33,539 - INFO - 💾 备份配置文件
+2025-11-24 10:23:33,540 - INFO - 备份路径: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs/experiment/test_p450_cystal.yaml.backup
+2025-11-24 10:23:33,540 - INFO - 📂 扫描检查点目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints
+2025-11-24 10:23:33,541 - INFO - 找到 50 个检查点: model-best-step00005500-loss0.035267.ckpt → model-best-step00030000-loss0.029124.ckpt
+2025-11-24 10:23:33,541 - INFO - 🎲 抽取 10 个检查点:
+2025-11-24 10:23:33,541 - INFO -    - Step  5500: model-best-step00005500-loss0.035267.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step  8000: model-best-step00008000-loss0.034126.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step 10500: model-best-step00010500-loss0.032926.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step 13500: model-best-step00013500-loss0.032288.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step 16000: model-best-step00016000-loss0.031656.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step 19000: model-best-step00019000-loss0.030850.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step 21500: model-best-step00021500-loss0.030195.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step 24500: model-best-step00024500-loss0.029963.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step 27000: model-best-step00027000-loss0.029507.ckpt
+2025-11-24 10:23:33,541 - INFO -    - Step 30000: model-best-step00030000-loss0.029124.ckpt
+2025-11-24 10:23:33,542 - INFO - ============================================================
+2025-11-24 10:23:33,542 - INFO - 开始测试 Step  5500 | 检查点: model-best-step00005500-loss0.035267.ckpt
+2025-11-24 10:23:33,543 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/5500_step
+2025-11-24 10:23:33,543 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00005500-loss0.035267.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/5500_step
+2025-11-24 10:25:26,526 - ERROR - ❌ Step  5500 测试失败
+2025-11-24 10:25:26,526 - ERROR - 错误输出:  line 349, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/datasets/test_datamodule.py", line 138, in __getitem__
+    return self.__getitem__(next_idx)  # 现在至少有失败计数保护
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/datasets/test_datamodule.py", line 71, in __getitem__
+    raise RuntimeError(
+RuntimeError: 数据集加载失败次数超过10次，请检查数据文件完整性或target_dir路径配置。
+
+
+Set the environment variable HYDRA_FULL_ERROR=1 for a complete stack trace.
+
+2025-11-24 10:25:26,527 - INFO - ============================================================
+2025-11-24 10:25:26,527 - INFO - 开始测试 Step  8000 | 检查点: model-best-step00008000-loss0.034126.ckpt
+2025-11-24 10:25:26,527 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/8000_step
+2025-11-24 10:25:26,527 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00008000-loss0.034126.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/8000_step
+2025-11-24 10:26:05,102 - INFO - 📝 配置文件已恢复
+2025-11-24 10:26:59,947 - INFO - 🚀 批量测试任务启动
+2025-11-24 10:26:59,948 - INFO - 配置: {'checkpoint_dir': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints', 'config': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs/experiment/test_p450_cystal.yaml', 'output_dir': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue', 'test_script': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py', 'num_samples': 10, 'log': 'batch_test.log', 'config_name': 'test_p450_cystal'}
+2025-11-24 10:26:59,948 - INFO - 💾 备份配置文件
+2025-11-24 10:26:59,949 - INFO - 备份路径: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs/experiment/test_p450_cystal.yaml.backup
+2025-11-24 10:26:59,949 - INFO - 📂 扫描检查点目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints
+2025-11-24 10:26:59,950 - INFO - 找到 50 个检查点: model-best-step00005500-loss0.035267.ckpt → model-best-step00030000-loss0.029124.ckpt
+2025-11-24 10:26:59,950 - INFO - 🎲 抽取 10 个检查点:
+2025-11-24 10:26:59,950 - INFO -    - Step  5500: model-best-step00005500-loss0.035267.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step  8000: model-best-step00008000-loss0.034126.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step 10500: model-best-step00010500-loss0.032926.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step 13500: model-best-step00013500-loss0.032288.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step 16000: model-best-step00016000-loss0.031656.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step 19000: model-best-step00019000-loss0.030850.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step 21500: model-best-step00021500-loss0.030195.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step 24500: model-best-step00024500-loss0.029963.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step 27000: model-best-step00027000-loss0.029507.ckpt
+2025-11-24 10:26:59,950 - INFO -    - Step 30000: model-best-step00030000-loss0.029124.ckpt
+2025-11-24 10:26:59,951 - INFO - ============================================================
+2025-11-24 10:26:59,951 - INFO - 开始测试 Step  5500 | 检查点: model-best-step00005500-loss0.035267.ckpt
+2025-11-24 10:26:59,952 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/5500_step
+2025-11-24 10:26:59,952 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00005500-loss0.035267.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/5500_step
+2025-11-24 10:42:25,781 - INFO - ✅ Step  5500 测试成功
+2025-11-24 10:42:25,783 - INFO - ============================================================
+2025-11-24 10:42:25,783 - INFO - 开始测试 Step  8000 | 检查点: model-best-step00008000-loss0.034126.ckpt
+2025-11-24 10:42:25,783 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/8000_step
+2025-11-24 10:42:25,783 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00008000-loss0.034126.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/8000_step
+2025-11-24 10:57:56,961 - INFO - ✅ Step  8000 测试成功
+2025-11-24 10:57:56,964 - INFO - ============================================================
+2025-11-24 10:57:56,964 - INFO - 开始测试 Step 10500 | 检查点: model-best-step00010500-loss0.032926.ckpt
+2025-11-24 10:57:56,964 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/10500_step
+2025-11-24 10:57:56,964 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00010500-loss0.032926.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/10500_step
+2025-11-24 11:13:38,834 - INFO - ✅ Step 10500 测试成功
+2025-11-24 11:13:38,835 - INFO - ============================================================
+2025-11-24 11:13:38,835 - INFO - 开始测试 Step 13500 | 检查点: model-best-step00013500-loss0.032288.ckpt
+2025-11-24 11:13:38,835 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/13500_step
+2025-11-24 11:13:38,835 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00013500-loss0.032288.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/13500_step
+2025-11-24 11:28:20,474 - INFO - ✅ Step 13500 测试成功
+2025-11-24 11:28:20,476 - INFO - ============================================================
+2025-11-24 11:28:20,476 - INFO - 开始测试 Step 16000 | 检查点: model-best-step00016000-loss0.031656.ckpt
+2025-11-24 11:28:20,476 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/16000_step
+2025-11-24 11:28:20,476 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00016000-loss0.031656.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/16000_step
+2025-11-24 11:43:49,991 - INFO - ✅ Step 16000 测试成功
+2025-11-24 11:43:49,993 - INFO - ============================================================
+2025-11-24 11:43:49,993 - INFO - 开始测试 Step 19000 | 检查点: model-best-step00019000-loss0.030850.ckpt
+2025-11-24 11:43:49,993 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/19000_step
+2025-11-24 11:43:49,993 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00019000-loss0.030850.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/19000_step
+2025-11-24 11:58:24,716 - INFO - ✅ Step 19000 测试成功
+2025-11-24 11:58:24,718 - INFO - ============================================================
+2025-11-24 11:58:24,718 - INFO - 开始测试 Step 21500 | 检查点: model-best-step00021500-loss0.030195.ckpt
+2025-11-24 11:58:24,718 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/21500_step
+2025-11-24 11:58:24,718 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00021500-loss0.030195.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/21500_step
+2025-11-24 12:13:16,763 - INFO - ✅ Step 21500 测试成功
+2025-11-24 12:13:16,765 - INFO - ============================================================
+2025-11-24 12:13:16,765 - INFO - 开始测试 Step 24500 | 检查点: model-best-step00024500-loss0.029963.ckpt
+2025-11-24 12:13:16,765 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/24500_step
+2025-11-24 12:13:16,765 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00024500-loss0.029963.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/24500_step
+2025-11-24 12:27:38,074 - INFO - ✅ Step 24500 测试成功
+2025-11-24 12:27:38,075 - INFO - ============================================================
+2025-11-24 12:27:38,075 - INFO - 开始测试 Step 27000 | 检查点: model-best-step00027000-loss0.029507.ckpt
+2025-11-24 12:27:38,075 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/27000_step
+2025-11-24 12:27:38,075 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00027000-loss0.029507.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/27000_step
+2025-11-24 12:42:47,280 - INFO - ✅ Step 27000 测试成功
+2025-11-24 12:42:47,282 - INFO - ============================================================
+2025-11-24 12:42:47,282 - INFO - 开始测试 Step 30000 | 检查点: model-best-step00030000-loss0.029124.ckpt
+2025-11-24 12:42:47,282 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/30000_step
+2025-11-24 12:42:47,282 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00030000-loss0.029124.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/30000_step
+2025-11-24 12:58:10,122 - INFO - ✅ Step 30000 测试成功
+2025-11-24 12:58:10,123 - INFO - 📝 配置文件已恢复
+2025-11-24 12:58:10,123 - INFO - ============================================================
+2025-11-24 12:58:10,123 - INFO - 📊 测试完成: 10/10 成功
+2025-11-24 15:46:16,345 - INFO - 🚀 批量测试任务启动
+2025-11-24 15:46:16,345 - INFO - 配置: {'checkpoint_dir': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints', 'config': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs/experiment/test_p450_fungi.yaml', 'output_dir': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/fungi_val', 'test_script': '/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py', 'num_samples': 10, 'log': 'batch_test.log', 'config_name': 'test_p450_cystal'}
+2025-11-24 15:46:16,346 - INFO - 💾 备份配置文件
+2025-11-24 15:46:16,347 - INFO - 备份路径: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/configs/experiment/test_p450_fungi.yaml.backup
+2025-11-24 15:46:16,347 - INFO - 📂 扫描检查点目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints
+2025-11-24 15:46:16,348 - INFO - 找到 50 个检查点: model-best-step00005500-loss0.035267.ckpt → model-best-step00030000-loss0.029124.ckpt
+2025-11-24 15:46:16,348 - INFO - 🎲 抽取 10 个检查点:
+2025-11-24 15:46:16,348 - INFO -    - Step  5500: model-best-step00005500-loss0.035267.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step  8000: model-best-step00008000-loss0.034126.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step 10500: model-best-step00010500-loss0.032926.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step 13500: model-best-step00013500-loss0.032288.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step 16000: model-best-step00016000-loss0.031656.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step 19000: model-best-step00019000-loss0.030850.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step 21500: model-best-step00021500-loss0.030195.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step 24500: model-best-step00024500-loss0.029963.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step 27000: model-best-step00027000-loss0.029507.ckpt
+2025-11-24 15:46:16,348 - INFO -    - Step 30000: model-best-step00030000-loss0.029124.ckpt
+2025-11-24 15:46:16,350 - INFO - ============================================================
+2025-11-24 15:46:16,350 - INFO - 开始测试 Step  5500 | 检查点: model-best-step00005500-loss0.035267.ckpt
+2025-11-24 15:46:16,350 - INFO - 输出目录: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/fungi_val/5500_step
+2025-11-24 15:46:16,350 - INFO - 执行命令: python /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/test.py experiment=test_p450_cystal load_ckpt_path=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/checkpoints/model-best-step00005500-loss0.035267.ckpt paths.output_dir=/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue/fungi_val/5500_step
+2025-11-24 15:48:11,716 - INFO - 📝 配置文件已恢复

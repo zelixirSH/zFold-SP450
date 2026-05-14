@@ -1,0 +1,298 @@
+DETAILED ANALYSIS RESULTS
+Generated: 2025-11-19 18:08:39.794473
+================================================================================
+
+Method: zFold_uniref90_m2
+Directory: /sugon_store/zhengliangzhen/P450/structure_prediction/P450-2019Sept_dataset/zFold_uniref90_output_m2
+Total predictions: 73
+Average time: 7.29 hours
+Total time: 532.21 hours
+
+Individual predictions:
+  6L39_A: 0.10s
+  6M4P_A: 0.09s
+  6M4S_A: 0.10s
+  6T1T_A: 157090.88s
+  6VBN_A: 0.10s
+  6VBY_A: 156412.88s
+  6VXV_A: 0.09s
+  6VZA_A: 0.09s
+  6VZB_A: 0.09s
+  6XA2_A: 0.10s
+  6XA3_A: 0.10s
+  7AO7_A: 0.10s
+  7AYX_A: 0.10s
+  7DI3_A: 0.09s
+  7DVO_A: 0.09s
+  7EGN_A: 0.11s
+  7OQ6_A: 0.10s
+  7OW9_A: 0.09s
+  7P5T_A: 0.09s
+  7QKE_A: 0.10s
+  7R1I_A: 0.10s
+  7SHI_A: 0.09s
+  7SUX_A: 157416.23s
+  7TEF_A: 0.11s
+  7TLO_A: 0.09s
+  7TTB_A: 0.09s
+  7TTO_A: 0.09s
+  7V40_A: 0.11s
+  7WDD_A: 0.11s
+  7WDE_A: 0.12s
+  7WZL_A: 154955.45s
+  7X53_A: 0.10s
+  7XBM_A: 0.06s
+  7Y0P_A: 0.11s
+  7Y0R_A: 0.11s
+  7Y9J_A: 0.11s
+  7YD9_A: 114702.30s
+  7YDA_A: 103142.96s
+  7YDB_A: 97871.10s
+  7YDC_A: 94311.01s
+  7YDD_A: 88241.76s
+  7YDE_A: 82306.52s
+  7YDL_A: 78229.64s
+  7YFT_A: 74162.90s
+  8A6W_B: 0.10s
+  8CKN_A: 0.09s
+  8EOH_A: 139520.38s
+  8F91_A: 0.04s
+  8GK3_A: 131654.71s
+  8GTL_A: 0.10s
+  8HG9_A: 0.10s
+  8HNY_A: 0.09s
+  8HO1_A: 0.09s
+  8HOU_A: 0.11s
+  8JNP_A: 0.09s
+  8JRL_A: 0.10s
+  8JUA_A: 0.10s
+  8K1X_A: 0.10s
+  8Q2F_A: 128847.90s
+  8Q5J_A: 0.09s
+  8Q6X_A: 0.09s
+  8Q6Z_A: 0.09s
+  8QZE_A: 0.11s
+  8QZF_A: 0.11s
+  8SPC_A: 0.10s
+  8SWL_A: 0.10s
+  8TWU_A: 0.10s
+  8W72_A: 0.10s
+  8W7G_A: 0.10s
+  8YHN_A: 0.10s
+  9CJG_A: 0.10s
+  9EF0_A: 157082.52s
+  9JQM_A: 0.11s
+
+================================================================================
+
+Method: AF2_uniref90
+Directory: /sugon_store/zhengliangzhen/P450/structure_prediction/P450-2019Sept_dataset/AF2_uniref90_output
+Total predictions: 57
+Average time: 0.00 hours
+Total time: 0.00 hours
+
+Individual predictions:
+  6L39_A: 0.00s
+  6M4P_A: 0.00s
+  6M4S_A: 0.01s
+  6VBN_A: 0.00s
+  6VBY_A: 0.00s
+  6VXV_A: 0.00s
+  6VZB_A: 0.00s
+  6XA2_A: 0.01s
+  6XA3_A: 0.00s
+  7AO7_A: 0.01s
+  7AYX_A: 0.00s
+  7DI3_A: 0.00s
+  7DVO_A: 0.00s
+  7OW9_A: 0.00s
+  7P5T_A: 0.01s
+  7QKE_A: 0.00s
+  7R1I_A: 0.01s
+  7SHI_A: 0.00s
+  7SUX_A: 0.00s
+  7TEF_A: 0.00s
+  7TLO_A: 0.00s
+  7TTB_A: 0.01s
+  7TTO_A: 0.00s
+  7WDD_A: 0.00s
+  7X53_A: 0.00s
+  7XBM_A: 0.00s
+  7Y0P_A: 0.00s
+  7YD9_A: 0.00s
+  7YDB_A: 0.00s
+  7YDD_A: 0.00s
+  7YDL_A: 0.00s
+  7YFT_A: 0.01s
+  8A6W_B: 0.00s
+  8CKN_A: 0.00s
+  8F91_A: 0.00s
+  8GK3_A: 0.00s
+  8GTL_A: 0.00s
+  8HG9_A: 0.01s
+  8HNY_A: 0.01s
+  8HO1_A: 0.00s
+  8HOU_A: 0.01s
+  8JUA_A: 0.00s
+  8K1X_A: 0.00s
+  8Q2F_A: 0.00s
+  8Q6X_A: 0.01s
+  8Q6Z_A: 0.01s
+  8QZE_A: 0.00s
+  8QZF_A: 0.00s
+  8SPC_A: 0.01s
+  8SWL_A: 0.00s
+  8TWU_A: 0.01s
+  8W72_A: 0.00s
+  8W7G_A: 0.00s
+  8YHN_A: 0.00s
+  9CJG_A: 0.01s
+  9EF0_A: 0.00s
+  9JQM_A: 0.00s
+
+================================================================================
+
+Method: AF3
+Directory: /sugon_store/zhengliangzhen/P450/structure_prediction/P450-2019Sept_dataset/AF3_output
+Total predictions: 73
+Average time: 0.05 hours
+Total time: 3.52 hours
+
+Individual predictions:
+  6L39_A: 145.35s
+  6M4P_A: 145.39s
+  6M4S_A: 146.30s
+  6T1T_A: 292.70s
+  6VBN_A: 141.73s
+  6VBY_A: 144.87s
+  6VXV_A: 144.72s
+  6VZA_A: 144.21s
+  6VZB_A: 141.35s
+  6XA2_A: 146.52s
+  6XA3_A: 143.97s
+  7AO7_A: 144.74s
+  7AYX_A: 145.82s
+  7DI3_A: 142.76s
+  7DVO_A: 147.39s
+  7EGN_A: 146.35s
+  7OQ6_A: 146.56s
+  7OW9_A: 145.53s
+  7P5T_A: 144.77s
+  7QKE_A: 145.08s
+  7R1I_A: 146.07s
+  7SHI_A: 142.28s
+  7SUX_A: 1836.52s
+  7TEF_A: 146.80s
+  7TLO_A: 145.13s
+  7TTB_A: 144.31s
+  7TTO_A: 146.03s
+  7V40_A: 143.65s
+  7WDD_A: 147.35s
+  7WDE_A: 149.97s
+  7WZL_A: 151.76s
+  7X53_A: 143.20s
+  7XBM_A: 144.23s
+  7Y0P_A: 147.02s
+  7Y0R_A: 146.10s
+  7Y9J_A: 147.14s
+  7YD9_A: 155.03s
+  7YDA_A: 155.09s
+  7YDB_A: 151.12s
+  7YDC_A: 161.48s
+  7YDD_A: 145.70s
+  7YDE_A: 143.91s
+  7YDL_A: 144.67s
+  7YFT_A: 147.21s
+  8A6W_B: 146.06s
+  8CKN_A: 143.49s
+  8EOH_A: 146.79s
+  8F91_A: 143.01s
+  8GK3_A: 156.33s
+  8GTL_A: 144.24s
+  8HG9_A: 147.51s
+  8HNY_A: 144.15s
+  8HO1_A: 143.94s
+  8HOU_A: 146.10s
+  8JNP_A: 143.02s
+  8JRL_A: 144.71s
+  8JUA_A: 145.24s
+  8K1X_A: 144.27s
+  8Q2F_A: 157.88s
+  8Q5J_A: 145.66s
+  8Q6X_A: 145.67s
+  8Q6Z_A: 142.51s
+  8QZE_A: 146.51s
+  8QZF_A: 147.69s
+  8SPC_A: 145.87s
+  8SWL_A: 145.83s
+  8TWU_A: 145.93s
+  8W72_A: 145.93s
+  8W7G_A: 143.39s
+  8YHN_A: 145.69s
+  9CJG_A: 145.27s
+  9EF0_A: 293.01s
+  9JQM_A: 142.51s
+
+================================================================================
+
+Method: SimpleFold_100M
+Directory: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default/p450cystal_simplefold100M_samples
+Total predictions: 51
+Average time: 0.00 hours
+Total time: 0.00 hours
+
+Individual predictions:
+  6l39_a_sampled_0: 0.03s
+  6t1t_a_sampled_0: 0.05s
+  6vbn_a_sampled_0: 0.03s
+  6vby_a_sampled_0: 0.04s
+  6vxv_a_sampled_0: 0.03s
+  6vza_a_sampled_0: 0.03s
+  6vzb_a_sampled_0: 0.03s
+  6xa2_a_sampled_0: 0.04s
+  7ao7_a_sampled_0: 0.03s
+  7dvo_a_sampled_0: 0.03s
+  7egn_a_sampled_0: 0.04s
+  7oq6_a_sampled_0: 0.03s
+  7ow9_a_sampled_0: 0.03s
+  7p5t_a_sampled_0: 0.04s
+  7qke_a_sampled_0: 0.05s
+  7r1i_a_sampled_0: 0.03s
+  7shi_a_sampled_0: 0.03s
+  7tlo_a_sampled_0: 0.03s
+  7v40_a_sampled_0: 0.04s
+  7wde_a_sampled_0: 0.04s
+  7x53_a_sampled_0: 0.04s
+  7y0p_a_sampled_0: 0.04s
+  7y0r_a_sampled_0: 0.04s
+  7yd9_a_sampled_0: 0.04s
+  7yda_a_sampled_0: 0.04s
+  7ydb_a_sampled_0: 0.04s
+  7ydc_a_sampled_0: 0.04s
+  7ydd_a_sampled_0: 0.04s
+  7yde_a_sampled_0: 0.05s
+  7ydl_a_sampled_0: 0.04s
+  7yft_a_sampled_0: 0.04s
+  8a6w_b_sampled_0: 0.03s
+  8ckn_a_sampled_0: 0.04s
+  8gk3_a_sampled_0: 0.04s
+  8gtl_a_sampled_0: 0.03s
+  8hny_a_sampled_0: 0.03s
+  8ho1_a_sampled_0: 0.03s
+  8hou_a_sampled_0: 0.04s
+  8jnp_a_sampled_0: 0.03s
+  8jrl_a_sampled_0: 0.04s
+  8jua_a_sampled_0: 0.03s
+  8q2f_a_sampled_0: 0.04s
+  8q5j_a_sampled_0: 0.03s
+  8q6x_a_sampled_0: 0.03s
+  8q6z_a_sampled_0: 0.03s
+  8qze_a_sampled_0: 0.04s
+  8qzf_a_sampled_0: 0.04s
+  8twu_a_sampled_0: 0.03s
+  8yhn_a_sampled_0: 0.03s
+  9cjg_a_sampled_0: 0.03s
+  9ef0_a_sampled_0: 0.05s
+
+================================================================================
+

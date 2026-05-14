@@ -1,0 +1,1348 @@
+[2025-10-31 15:16:10,481][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 15:16:10,549][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 15:16:36,454][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-10-31 15:16:45,823][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 15:16:45,889][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 15:17:15,362][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-10-31 15:17:15,428][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-10-31 15:17:15,428][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-10-31 15:17:15,432][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-10-31 15:17:15,433][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-10-31 15:17:15,433][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-10-31 15:17:15,437][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-10-31 15:17:16,602][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-10-31 15:17:16,679][__main__][INFO] - [rank: 0] Starting training!
+[2025-10-31 15:17:23,152][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 974, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 109, in _call_setup_hook
+    _call_lightning_module_hook(trainer, "setup", stage=fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 176, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 665, in setup
+    batch = next(iter(self.trainer.datamodule.train_dataloader()))
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/datasets/train_datamodule.py", line 382, in train_dataloader
+    return DataLoader(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 383, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/sampler.py", line 165, in __init__
+    raise ValueError(
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+[2025-10-31 15:17:23,155][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-10-31 15:21:06,506][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 15:21:06,573][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 15:21:36,456][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-10-31 15:21:36,515][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-10-31 15:21:36,515][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-10-31 15:21:36,518][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-10-31 15:21:36,519][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-10-31 15:21:36,519][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-10-31 15:21:36,523][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-10-31 15:21:37,678][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-10-31 15:21:37,754][__main__][INFO] - [rank: 0] Starting training!
+[2025-10-31 15:21:44,395][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 974, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 109, in _call_setup_hook
+    _call_lightning_module_hook(trainer, "setup", stage=fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 176, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 665, in setup
+    batch = next(iter(self.trainer.datamodule.train_dataloader()))
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/datasets/train_datamodule.py", line 382, in train_dataloader
+    return DataLoader(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 383, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/sampler.py", line 165, in __init__
+    raise ValueError(
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+[2025-10-31 15:21:44,398][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-10-31 15:27:08,231][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 15:27:08,298][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 15:27:38,475][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-10-31 15:27:38,543][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-10-31 15:27:38,544][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-10-31 15:27:38,547][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-10-31 15:27:38,548][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-10-31 15:27:38,548][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-10-31 15:27:38,552][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-10-31 15:27:39,708][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-10-31 15:27:39,783][__main__][INFO] - [rank: 0] Starting training!
+[2025-10-31 15:27:46,058][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 974, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 109, in _call_setup_hook
+    _call_lightning_module_hook(trainer, "setup", stage=fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 176, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 665, in setup
+    batch = next(iter(self.trainer.datamodule.train_dataloader()))
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/datasets/train_datamodule.py", line 382, in train_dataloader
+    return DataLoader(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 383, in __init__
+    sampler = RandomSampler(dataset, generator=generator)  # type: ignore[arg-type]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/sampler.py", line 165, in __init__
+    raise ValueError(
+ValueError: num_samples should be a positive integer value, but got num_samples=0
+[2025-10-31 15:27:46,061][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-10-31 15:50:14,900][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 15:50:14,965][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 15:50:35,501][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-10-31 15:50:47,303][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 15:50:47,372][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 15:51:17,184][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-10-31 15:51:17,273][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-10-31 15:51:17,274][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-10-31 15:51:17,278][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-10-31 15:51:17,279][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-10-31 15:51:17,279][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-10-31 15:51:17,284][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-10-31 15:51:18,480][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-10-31 15:51:18,556][__main__][INFO] - [rank: 0] Starting training!
+[2025-10-31 15:52:40,283][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1012, in _run
+    results = self._run_stage()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1056, in _run_stage
+    self.fit_loop.run()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 216, in run
+    self.advance()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 455, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 152, in run
+    self.advance(data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 344, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 192, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 270, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 176, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/core/module.py", line 1328, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/core/optimizer.py", line 154, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/ddp.py", line 270, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 239, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/amp.py", line 76, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/precision.py", line 123, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/lr_scheduler.py", line 140, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/optimizer.py", line 493, in wrapper
+    out = func(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/adamw.py", line 220, in step
+    loss = closure()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/precision.py", line 109, in _wrap_closure
+    closure_result = closure()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 146, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 131, in closure
+    step_output = self._step_fn()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 319, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 328, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 390, in training_step
+    return self._forward_redirection(self.model, self.lightning_module, "training_step", *args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 641, in __call__
+    wrapper_output = wrapper_module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 634, in wrapped_forward
+    out = method(*_args, **_kwargs)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 502, in training_step
+    return self.flow_matching_train_step(batch, batch_idx)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 382, in flow_matching_train_step
+    batch = self.processor.preprocess_training(
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/processor/protein_processor.py", line 143, in preprocess_training
+    self.process_esm(batch, esm_model, esm_dict, af2_to_esm)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/processor/protein_processor.py", line 74, in process_esm
+    esm_s_, _ = compute_language_model_representations(
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/esm_utils.py", line 201, in compute_language_model_representations
+    res = esm(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1440, in forward
+    outputs = self.module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/misc/flatten_params_wrapper.py", line 487, in forward
+    return self.module(*inputs, **kwinputs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/.cache/torch/hub/facebookresearch_esm_main/esm/model/esm2.py", line 112, in forward
+    x, attn = layer(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1440, in forward
+    outputs = self.module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/misc/flatten_params_wrapper.py", line 487, in forward
+    return self.module(*inputs, **kwinputs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/.cache/torch/hub/facebookresearch_esm_main/esm/modules.py", line 125, in forward
+    x, attn = self.self_attn(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/.cache/torch/hub/facebookresearch_esm_main/esm/multihead_attention.py", line 400, in forward
+    ).type_as(attn).transpose(1, 0)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 61, in _call_and_handle_interrupt
+    trainer._teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1035, in _teardown
+    self.strategy.teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/ddp.py", line 419, in teardown
+    super().teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/parallel.py", line 134, in teardown
+    super().teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 536, in teardown
+    self.lightning_module.cpu()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/fabric/utilities/device_dtype_mixin.py", line 82, in cpu
+    return super().cpu()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1121, in cpu
+    return self._apply(lambda t: t.cpu())
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1089, in _apply
+    self.assert_state(TrainingState.IDLE)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 2297, in assert_state
+    raise ValueError(msg)
+ValueError: expected to be in states [<TrainingState.IDLE: 1>] but current state is TrainingState.FORWARD
+[2025-10-31 15:52:40,378][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-10-31 15:59:59,710][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 15:59:59,757][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 16:00:28,169][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-10-31 16:00:55,070][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-10-31 16:00:55,118][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-10-31 16:00:55,119][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-10-31 16:00:55,122][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-10-31 16:00:55,123][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-10-31 16:00:55,123][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-10-31 16:00:55,126][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-10-31 16:00:55,984][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-10-31 16:00:56,055][__main__][INFO] - [rank: 0] Starting training!
+[2025-10-31 16:01:25,934][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 981, in _run
+    self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+    self.resume_start(checkpoint_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 84, in resume_start
+    self._loaded_checkpoint = _pl_migrate_checkpoint(loaded_checkpoint, checkpoint_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/migration/utils.py", line 143, in _pl_migrate_checkpoint
+    old_version = _get_version(checkpoint)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/migration/utils.py", line 164, in _get_version
+    return checkpoint["pytorch-lightning_version"]
+KeyError: 'pytorch-lightning_version'
+[2025-10-31 16:01:25,951][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-10-31 16:03:41,432][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 16:03:41,478][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 16:04:09,654][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-10-31 16:04:09,706][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-10-31 16:04:09,706][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-10-31 16:04:09,710][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-10-31 16:04:09,710][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-10-31 16:04:09,711][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-10-31 16:04:09,714][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-10-31 16:04:10,771][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-10-31 16:04:10,847][__main__][INFO] - [rank: 0] Starting training!
+[2025-10-31 16:04:47,113][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1012, in _run
+    results = self._run_stage()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1056, in _run_stage
+    self.fit_loop.run()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 216, in run
+    self.advance()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 455, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 152, in run
+    self.advance(data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 344, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 192, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 270, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 176, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/core/module.py", line 1328, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/core/optimizer.py", line 154, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/ddp.py", line 270, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 239, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/amp.py", line 76, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/precision.py", line 123, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/lr_scheduler.py", line 140, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/optimizer.py", line 493, in wrapper
+    out = func(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/adamw.py", line 220, in step
+    loss = closure()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/precision.py", line 109, in _wrap_closure
+    closure_result = closure()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 146, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 131, in closure
+    step_output = self._step_fn()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 319, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 328, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 390, in training_step
+    return self._forward_redirection(self.model, self.lightning_module, "training_step", *args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 641, in __call__
+    wrapper_output = wrapper_module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 634, in wrapped_forward
+    out = method(*_args, **_kwargs)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 502, in training_step
+    return self.flow_matching_train_step(batch, batch_idx)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 399, in flow_matching_train_step
+    out_dict = self.model(y_t, t, batch)
+TypeError: 'str' object is not callable
+[2025-10-31 16:04:47,122][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-10-31 16:06:28,215][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-10-31 16:06:28,282][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-10-31 16:06:58,447][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-10-31 16:06:58,500][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-10-31 16:06:58,500][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-10-31 16:06:58,503][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-10-31 16:06:58,504][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-10-31 16:06:58,504][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-10-31 16:06:58,509][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-10-31 16:06:59,920][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-10-31 16:06:59,999][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-03 13:39:55,458][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-03 13:39:55,525][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-03 13:40:24,871][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-03 13:40:24,922][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-03 13:40:24,923][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-03 13:40:24,927][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-03 13:40:24,928][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-03 13:40:24,928][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-03 13:40:24,933][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-03 13:40:26,213][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-03 13:40:26,311][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-03 13:41:22,573][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 974, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 107, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 198, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/datasets/train_datamodule.py", line 367, in setup
+    raise RuntimeError(
+RuntimeError: Batch size (1) is not divisible by the number of devices (6).
+[2025-11-03 13:41:22,574][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-11-03 13:43:41,556][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-03 13:43:41,622][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-03 13:44:11,318][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-03 13:44:11,368][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-03 13:44:11,369][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-03 13:44:11,372][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-03 13:44:11,373][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-03 13:44:11,373][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-03 13:44:11,377][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-03 13:44:12,494][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-03 13:44:12,572][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-03 16:25:06,403][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1012, in _run
+    results = self._run_stage()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1056, in _run_stage
+    self.fit_loop.run()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 216, in run
+    self.advance()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 455, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 152, in run
+    self.advance(data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 344, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 192, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 270, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 176, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/core/module.py", line 1328, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/core/optimizer.py", line 154, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/ddp.py", line 270, in optimizer_step
+    optimizer_output = super().optimizer_step(optimizer, closure, model, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 239, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/amp.py", line 76, in optimizer_step
+    return super().optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/precision.py", line 123, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/lr_scheduler.py", line 140, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/optimizer.py", line 493, in wrapper
+    out = func(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/optimizer.py", line 91, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/optim/adamw.py", line 220, in step
+    loss = closure()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/plugins/precision/precision.py", line 109, in _wrap_closure
+    closure_result = closure()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 146, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 131, in closure
+    step_output = self._step_fn()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 319, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 328, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 390, in training_step
+    return self._forward_redirection(self.model, self.lightning_module, "training_step", *args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 641, in __call__
+    wrapper_output = wrapper_module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 634, in wrapped_forward
+    out = method(*_args, **_kwargs)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 502, in training_step
+    return self.flow_matching_train_step(batch, batch_idx)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/model/simplefold.py", line 382, in flow_matching_train_step
+    batch = self.processor.preprocess_training(
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/processor/protein_processor.py", line 143, in preprocess_training
+    self.process_esm(batch, esm_model, esm_dict, af2_to_esm)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/processor/protein_processor.py", line 74, in process_esm
+    esm_s_, _ = compute_language_model_representations(
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/esm_utils.py", line 201, in compute_language_model_representations
+    res = esm(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1440, in forward
+    outputs = self.module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/misc/flatten_params_wrapper.py", line 487, in forward
+    return self.module(*inputs, **kwinputs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/.cache/torch/hub/facebookresearch_esm_main/esm/model/esm2.py", line 112, in forward
+    x, attn = layer(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1440, in forward
+    outputs = self.module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/misc/flatten_params_wrapper.py", line 487, in forward
+    return self.module(*inputs, **kwinputs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/.cache/torch/hub/facebookresearch_esm_main/esm/modules.py", line 125, in forward
+    x, attn = self.self_attn(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/.cache/torch/hub/facebookresearch_esm_main/esm/multihead_attention.py", line 381, in forward
+    attn_probs = F.dropout(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/functional.py", line 1425, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/_VF.py", line 27, in __getattr__
+    def __getattr__(self, name: str) -> object:
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 61, in _call_and_handle_interrupt
+    trainer._teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1035, in _teardown
+    self.strategy.teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/ddp.py", line 419, in teardown
+    super().teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/parallel.py", line 134, in teardown
+    super().teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 536, in teardown
+    self.lightning_module.cpu()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/fabric/utilities/device_dtype_mixin.py", line 82, in cpu
+    return super().cpu()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1121, in cpu
+    return self._apply(lambda t: t.cpu())
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1089, in _apply
+    self.assert_state(TrainingState.IDLE)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 2297, in assert_state
+    raise ValueError(msg)
+ValueError: expected to be in states [<TrainingState.IDLE: 1>] but current state is TrainingState.FORWARD
+[2025-11-03 16:25:06,430][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-11-03 16:25:48,848][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-03 16:25:48,914][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-03 16:26:18,539][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-03 16:26:18,593][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-03 16:26:18,593][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-03 16:26:18,598][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-03 16:26:18,598][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-03 16:26:18,599][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-03 16:26:18,603][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-03 16:26:19,982][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-03 16:26:20,064][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-03 19:28:31,045][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-11-18 17:55:51,244][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 17:55:51,314][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 17:55:54,703][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-18 17:57:13,849][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 17:57:13,918][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 17:57:17,360][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-18 17:57:35,979][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 17:57:36,045][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 17:57:42,332][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-18 17:57:56,405][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 17:57:56,476][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 17:58:26,072][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-18 17:58:26,116][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-18 17:58:26,116][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-18 17:58:26,121][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-18 17:58:26,121][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-18 17:58:26,122][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-18 17:58:26,126][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-18 17:58:27,291][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-18 17:58:27,364][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-18 18:15:55,568][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-18 18:22:24,404][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 18:22:24,575][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 18:22:57,652][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default/checkpoints/last.ckpt>...
+[2025-11-18 18:23:25,525][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-18 18:23:25,651][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-18 18:23:25,651][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-18 18:23:25,683][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-18 18:23:25,683][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-18 18:23:25,683][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-18 18:23:25,723][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-18 18:23:27,003][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-18 18:23:27,948][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-18 18:25:31,261][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 981, in _run
+    self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 409, in _restore_modules_and_callbacks
+    self.restore_model()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 283, in restore_model
+    call._call_lightning_module_hook(self.trainer, "on_load_checkpoint", self._loaded_checkpoint)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 176, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/model/simplefold.py", line 756, in on_load_checkpoint
+    self.fwd_flops = checkpoint["hyper_parameters"]["fwd_flops"]
+KeyError: 'fwd_flops'
+[2025-11-18 18:25:31,273][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-18 18:26:57,645][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 18:26:57,646][utils.utils][WARNING] - [rank: 0] Field 'logger' not found in config. Skipping 'logger' config printing...
+[2025-11-18 18:26:57,805][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 18:27:30,517][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt>...
+[2025-11-18 18:27:59,478][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.test_datamodule.SimpleFoldInferenceDataModule>
+[2025-11-18 18:27:59,522][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/utils.py", line 644, in _locate
+    obj = getattr(obj, part)
+AttributeError: module 'datasets' has no attribute 'test_datamodule'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/utils.py", line 650, in _locate
+    obj = import_module(mod)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/datasets/test_datamodule.py", line 8, in <module>
+    import blobfile as bf
+ModuleNotFoundError: No module named 'blobfile'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 134, in _resolve_target
+    target = _locate(target)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/utils.py", line 653, in _locate
+    raise ImportError(
+ImportError: Error loading 'datasets.test_datamodule.SimpleFoldInferenceDataModule':
+ModuleNotFoundError("No module named 'blobfile'")
+Are you sure that 'test_datamodule' is importable from module 'datasets'?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 54, in train
+    datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 333, in instantiate_node
+    _target_ = _resolve_target(node.get(_Keys.TARGET), full_key)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 139, in _resolve_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error locating target 'datasets.test_datamodule.SimpleFoldInferenceDataModule', set env var HYDRA_FULL_ERROR=1 to see chained exception.
+full_key: data
+[2025-11-18 18:27:59,632][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-11-18 18:34:37,872][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 18:34:37,949][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 18:35:07,772][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-18 18:35:07,823][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-18 18:35:07,823][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-18 18:35:07,829][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-18 18:35:07,830][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-18 18:35:07,830][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-18 18:35:07,834][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-18 18:35:09,511][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-18 18:35:10,072][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-18 18:36:21,250][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 974, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 107, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 198, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/datasets/train_datamodule.py", line 367, in setup
+    raise RuntimeError(
+RuntimeError: Batch size (2) is not divisible by the number of devices (6).
+[2025-11-18 18:36:21,251][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-18 18:41:52,014][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 18:41:52,078][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 18:42:15,114][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 18:42:15,180][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 18:42:21,521][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-18 18:42:21,565][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-18 18:42:21,566][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-18 18:42:21,569][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-18 18:42:21,570][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-18 18:42:21,570][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-18 18:42:21,574][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-18 18:42:22,823][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-18 18:42:22,936][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-18 21:41:15,477][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-19 18:42:44,153][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 18:47:33,787][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 18:56:30,077][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 18:59:44,264][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 18:59:44,349][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-19 19:00:14,861][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-19 19:00:14,910][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-19 19:00:14,910][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-19 19:00:14,914][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-19 19:00:14,914][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-19 19:00:14,914][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-19 19:00:14,919][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-19 19:00:15,795][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-19 19:00:15,888][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-19 19:02:40,488][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_filter
+[2025-11-19 19:03:19,583][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 19:03:19,648][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-19 19:03:54,870][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-19 19:03:54,905][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-19 19:03:54,906][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-19 19:03:54,910][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-19 19:03:54,910][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-19 19:03:54,911][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-19 19:03:54,915][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-19 19:03:56,271][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-19 19:03:56,364][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-19 20:26:26,845][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 20:26:26,911][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-19 20:26:28,724][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 92, in _call_target
+    return _target_(*args, **kwargs)
+TypeError: SimpleFold.__init__() got an unexpected keyword argument 'ckpt_path'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 187, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 38, in train
+    model: LightningModule = hydra.utils.instantiate(cfg.model)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 347, in instantiate_node
+    return _call_target(_target_, partial, args, kwargs, full_key)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 97, in _call_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error in call to target 'model.simplefold.SimpleFold':
+TypeError("SimpleFold.__init__() got an unexpected keyword argument 'ckpt_path'")
+full_key: model
+[2025-11-19 20:26:28,725][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_filter
+[2025-11-19 20:26:54,806][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 20:26:54,868][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-19 20:27:25,634][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-11-19 20:27:53,899][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-19 20:27:53,932][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-19 20:27:53,932][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-19 20:27:53,936][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-19 20:27:53,937][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-19 20:27:53,937][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-19 20:27:53,941][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-19 20:27:55,307][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-19 20:27:55,421][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-19 20:29:47,588][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 187, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 82, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 981, in _run
+    self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+    self.resume_start(checkpoint_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 84, in resume_start
+    self._loaded_checkpoint = _pl_migrate_checkpoint(loaded_checkpoint, checkpoint_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/migration/utils.py", line 143, in _pl_migrate_checkpoint
+    old_version = _get_version(checkpoint)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/migration/utils.py", line 164, in _get_version
+    return checkpoint["pytorch-lightning_version"]
+KeyError: 'pytorch-lightning_version'
+[2025-11-19 20:29:47,608][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_filter
+[2025-11-19 20:36:03,335][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 20:36:03,399][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-19 20:36:33,423][__main__][INFO] - [rank: 0] Loading pretrained weights from /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt
+[2025-11-19 20:36:33,676][__main__][INFO] - [rank: 0] Missing keys: 940 | Unexpected keys: 158
+[2025-11-19 20:36:33,676][__main__][WARNING] - [rank: 0] First 10 missing keys: ['model.esm_s_combine', 'model.pos_embedder.freq_bands', 'model.time_embedder.mlp.0.weight', 'model.time_embedder.mlp.0.bias', 'model.time_embedder.mlp.2.weight', 'model.time_embedder.mlp.2.bias', 'model.atom_encoder_transformer.blocks.0.attn.qkv.weight', 'model.atom_encoder_transformer.blocks.0.attn.proj.weight', 'model.atom_encoder_transformer.blocks.0.attn.proj.bias', 'model.atom_encoder_transformer.blocks.0.attn.q_norm.scale']
+[2025-11-19 20:36:33,676][__main__][WARNING] - [rank: 0] First 10 unexpected keys: ['esm_s_combine', 'pos_embedder.freq_bands', 'time_embedder.mlp.0.weight', 'time_embedder.mlp.0.bias', 'time_embedder.mlp.2.weight', 'time_embedder.mlp.2.bias', 'atom_encoder_transformer.blocks.0.attn.qkv.weight', 'atom_encoder_transformer.blocks.0.attn.proj.weight', 'atom_encoder_transformer.blocks.0.attn.proj.bias', 'atom_encoder_transformer.blocks.0.attn.q_norm.scale']
+[2025-11-19 20:36:33,676][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-11-19 20:37:01,350][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-19 20:37:01,381][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-19 20:37:01,381][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-19 20:37:01,385][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-19 20:37:01,386][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-19 20:37:01,386][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-19 20:37:01,390][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-19 20:37:02,511][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-19 20:37:02,583][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-19 20:38:52,928][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 187, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 103, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 981, in _run
+    self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+    self.resume_start(checkpoint_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 84, in resume_start
+    self._loaded_checkpoint = _pl_migrate_checkpoint(loaded_checkpoint, checkpoint_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/migration/utils.py", line 143, in _pl_migrate_checkpoint
+    old_version = _get_version(checkpoint)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/migration/utils.py", line 164, in _get_version
+    return checkpoint["pytorch-lightning_version"]
+KeyError: 'pytorch-lightning_version'
+[2025-11-19 20:38:52,931][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_filter
+[2025-11-19 20:43:17,366][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 20:43:17,430][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-19 20:43:47,910][__main__][INFO] - [rank: 0] Loading pretrained weights from /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt
+[2025-11-19 20:43:48,211][__main__][INFO] - [rank: 0] Missing keys: 940 | Unexpected keys: 158
+[2025-11-19 20:43:48,211][__main__][WARNING] - [rank: 0] First 10 missing keys: ['model.esm_s_combine', 'model.pos_embedder.freq_bands', 'model.time_embedder.mlp.0.weight', 'model.time_embedder.mlp.0.bias', 'model.time_embedder.mlp.2.weight', 'model.time_embedder.mlp.2.bias', 'model.atom_encoder_transformer.blocks.0.attn.qkv.weight', 'model.atom_encoder_transformer.blocks.0.attn.proj.weight', 'model.atom_encoder_transformer.blocks.0.attn.proj.bias', 'model.atom_encoder_transformer.blocks.0.attn.q_norm.scale']
+[2025-11-19 20:43:48,211][__main__][WARNING] - [rank: 0] First 10 unexpected keys: ['esm_s_combine', 'pos_embedder.freq_bands', 'time_embedder.mlp.0.weight', 'time_embedder.mlp.0.bias', 'time_embedder.mlp.2.weight', 'time_embedder.mlp.2.bias', 'atom_encoder_transformer.blocks.0.attn.qkv.weight', 'atom_encoder_transformer.blocks.0.attn.proj.weight', 'atom_encoder_transformer.blocks.0.attn.proj.bias', 'atom_encoder_transformer.blocks.0.attn.q_norm.scale']
+[2025-11-19 20:44:17,171][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-11-19 20:44:46,505][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-19 20:44:46,538][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-19 20:44:46,539][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-19 20:44:46,543][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-19 20:44:46,544][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-19 20:44:46,544][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-19 20:44:46,549][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-19 20:44:47,766][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-19 20:44:48,073][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-19 20:49:37,263][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_filter
+[2025-11-19 20:50:02,703][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-19 20:50:02,770][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-19 20:50:33,222][__main__][INFO] - [rank: 0] Loading pretrained weights from /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt
+[2025-11-19 20:50:33,476][__main__][INFO] - [rank: 0] Missing keys: 940 | Unexpected keys: 158
+[2025-11-19 20:50:33,477][__main__][WARNING] - [rank: 0] First 10 missing keys: ['model.esm_s_combine', 'model.pos_embedder.freq_bands', 'model.time_embedder.mlp.0.weight', 'model.time_embedder.mlp.0.bias', 'model.time_embedder.mlp.2.weight', 'model.time_embedder.mlp.2.bias', 'model.atom_encoder_transformer.blocks.0.attn.qkv.weight', 'model.atom_encoder_transformer.blocks.0.attn.proj.weight', 'model.atom_encoder_transformer.blocks.0.attn.proj.bias', 'model.atom_encoder_transformer.blocks.0.attn.q_norm.scale']
+[2025-11-19 20:50:33,477][__main__][WARNING] - [rank: 0] First 10 unexpected keys: ['esm_s_combine', 'pos_embedder.freq_bands', 'time_embedder.mlp.0.weight', 'time_embedder.mlp.0.bias', 'time_embedder.mlp.2.weight', 'time_embedder.mlp.2.bias', 'atom_encoder_transformer.blocks.0.attn.qkv.weight', 'atom_encoder_transformer.blocks.0.attn.proj.weight', 'atom_encoder_transformer.blocks.0.attn.proj.bias', 'atom_encoder_transformer.blocks.0.attn.q_norm.scale']
+[2025-11-19 20:51:02,004][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-11-19 20:51:29,371][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-19 20:51:29,401][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-19 20:51:29,401][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-19 20:51:29,405][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-19 20:51:29,406][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-19 20:51:29,406][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-19 20:51:29,410][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-19 20:51:30,537][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-19 20:51:30,817][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-20 01:56:21,664][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_filter
+[2025-11-20 10:46:33,876][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-20 10:46:33,940][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-20 10:47:02,096][__main__][INFO] - [rank: 0] Loading pretrained weights from /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter/checkpoints/last.ckpt
+[2025-11-20 10:47:06,739][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter_continue
+[2025-11-20 10:47:27,970][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-20 10:47:28,032][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-20 10:47:56,766][__main__][INFO] - [rank: 0] Loading pretrained weights from /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter/checkpoints/last.ckpt
+[2025-11-20 10:48:07,961][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 187, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 44, in train
+    checkpoint = torch.load(cfg.load_ckpt_path, map_location="cpu")
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/serialization.py", line 1470, in load
+    raise pickle.UnpicklingError(_get_wo_message(str(e))) from None
+_pickle.UnpicklingError: Weights only load failed. This file can still be loaded, to do so you have two options, [1mdo those steps only if you trust the source of the checkpoint[0m. 
+	(1) In PyTorch 2.6, we changed the default value of the `weights_only` argument in `torch.load` from `False` to `True`. Re-running `torch.load` with `weights_only` set to `False` will likely succeed, but it can result in arbitrary code execution. Do it only if you got the file from a trusted source.
+	(2) Alternatively, to load with `weights_only=True` please check the recommended steps in the following error message.
+	WeightsUnpickler error: Unsupported global: GLOBAL model.torch.architecture.FoldingDiT was not an allowed global by default. Please use `torch.serialization.add_safe_globals([FoldingDiT])` or the `torch.serialization.safe_globals([FoldingDiT])` context manager to allowlist this global if you trust this class/function.
+
+Check the documentation of torch.load to learn more about types accepted by default with weights_only https://pytorch.org/docs/stable/generated/torch.load.html.
+[2025-11-20 10:48:07,968][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter_continue
+[2025-11-20 11:07:20,357][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-20 11:07:20,422][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-20 11:07:48,921][__main__][INFO] - [rank: 0] Loading pretrained weights from /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt
+[2025-11-20 11:07:49,394][__main__][INFO] - [rank: 0] Missing keys: 782 | Unexpected keys: 0
+[2025-11-20 11:07:49,395][__main__][WARNING] - [rank: 0] First 10 missing keys: ['model_ema.n_averaged', 'model_ema.module.esm_s_combine', 'model_ema.module.pos_embedder.freq_bands', 'model_ema.module.time_embedder.mlp.0.weight', 'model_ema.module.time_embedder.mlp.0.bias', 'model_ema.module.time_embedder.mlp.2.weight', 'model_ema.module.time_embedder.mlp.2.bias', 'model_ema.module.atom_encoder_transformer.blocks.0.attn.qkv.weight', 'model_ema.module.atom_encoder_transformer.blocks.0.attn.proj.weight', 'model_ema.module.atom_encoder_transformer.blocks.0.attn.proj.bias']
+[2025-11-20 11:08:16,449][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt>...
+[2025-11-20 11:08:42,631][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-20 11:08:42,661][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-20 11:08:42,661][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-20 11:08:42,666][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-20 11:08:42,666][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-20 11:08:42,667][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-20 11:08:42,671][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-20 11:08:43,746][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-20 11:08:44,032][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-20 11:16:59,997][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-20 11:17:00,063][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-20 11:17:20,976][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter_continue
+[2025-11-20 11:20:10,695][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-20 11:20:10,762][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-20 11:20:39,811][__main__][INFO] - [rank: 0] Loading pretrained weights from /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt
+[2025-11-20 11:20:40,027][__main__][INFO] - [rank: 0] ✅ Loaded model weights | Missing keys: 940 | Unexpected keys: 158
+[2025-11-20 11:20:40,027][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 187, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 66, in train
+    model.model_ema = AveragedModel(
+NameError: name 'AveragedModel' is not defined
+[2025-11-20 11:20:40,028][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter_continue
+[2025-11-20 11:29:00,749][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-20 11:29:00,814][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-20 11:29:28,888][__main__][INFO] - [rank: 0] 🔄 Loading pretrained weights for finetuning: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt
+[2025-11-20 11:29:29,098][__main__][INFO] - [rank: 0] ✅ Loaded checkpoint:
+[2025-11-20 11:29:29,098][__main__][INFO] - [rank: 0]    - Model weights missing: 158 keys
+[2025-11-20 11:29:29,098][__main__][INFO] - [rank: 0]    - EMA weights missing: 159 keys
+[2025-11-20 11:29:29,099][__main__][INFO] - [rank: 0]    - Other missing: 623 (optimizer states, etc.)
+[2025-11-20 11:29:29,099][__main__][INFO] - [rank: 0]    - Unexpected keys: 158
+[2025-11-20 11:29:55,569][__main__][INFO] - [rank: 0] 📌 Finetuning mode: ESM2 frozen, training only folding network
+[2025-11-20 11:29:55,570][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-20 11:29:55,601][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-20 11:29:55,601][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-20 11:29:55,604][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-20 11:29:55,604][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-20 11:29:55,605][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-20 11:29:55,608][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-20 11:29:56,932][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-20 11:29:57,008][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-20 11:39:55,028][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1012, in _run
+    results = self._run_stage()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1056, in _run_stage
+    self.fit_loop.run()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 216, in run
+    self.advance()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 455, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 152, in run
+    self.advance(data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 344, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 185, in run
+    closure()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 146, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 131, in closure
+    step_output = self._step_fn()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/optimization/automatic.py", line 319, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 328, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 390, in training_step
+    return self._forward_redirection(self.model, self.lightning_module, "training_step", *args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 641, in __call__
+    wrapper_output = wrapper_module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1643, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1459, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 634, in wrapped_forward
+    out = method(*_args, **_kwargs)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/model/simplefold.py", line 502, in training_step
+    return self.flow_matching_train_step(batch, batch_idx)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/model/simplefold.py", line 382, in flow_matching_train_step
+    batch = self.processor.preprocess_training(
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/processor/protein_processor.py", line 143, in preprocess_training
+    self.process_esm(batch, esm_model, esm_dict, af2_to_esm)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/processor/protein_processor.py", line 74, in process_esm
+    esm_s_, _ = compute_language_model_representations(
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/esm_utils.py", line 201, in compute_language_model_representations
+    res = esm(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1440, in forward
+    outputs = self.module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/misc/flatten_params_wrapper.py", line 487, in forward
+    return self.module(*inputs, **kwinputs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/.cache/torch/hub/facebookresearch_esm_main/esm/model/esm2.py", line 112, in forward
+    x, attn = layer(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1440, in forward
+    outputs = self.module(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/misc/flatten_params_wrapper.py", line 487, in forward
+    return self.module(*inputs, **kwinputs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/.cache/torch/hub/facebookresearch_esm_main/esm/modules.py", line 124, in forward
+    x = self.self_attn_layer_norm(x)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1739, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1750, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/normalization.py", line 217, in forward
+    return F.layer_norm(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/functional.py", line 2910, in layer_norm
+    return torch.layer_norm(
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 187, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 122, in train
+    cfg.trainer, callbacks=callbacks, logger=loggers, plugins=None
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 61, in _call_and_handle_interrupt
+    trainer._teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1035, in _teardown
+    self.strategy.teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/ddp.py", line 419, in teardown
+    super().teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/parallel.py", line 134, in teardown
+    super().teardown()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/strategy.py", line 536, in teardown
+    self.lightning_module.cpu()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/fabric/utilities/device_dtype_mixin.py", line 82, in cpu
+    return super().cpu()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1121, in cpu
+    return self._apply(lambda t: t.cpu())
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/nn/modules/module.py", line 903, in _apply
+    module._apply(fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 1089, in _apply
+    self.assert_state(TrainingState.IDLE)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/fairscale/nn/data_parallel/fully_sharded_data_parallel.py", line 2297, in assert_state
+    raise ValueError(msg)
+ValueError: expected to be in states [<TrainingState.IDLE: 1>] but current state is TrainingState.FORWARD
+[2025-11-20 11:39:55,087][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter_continue
+[2025-11-20 11:40:07,841][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-20 11:40:07,904][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-20 11:40:35,233][__main__][INFO] - [rank: 0] 🔄 Loading pretrained weights for finetuning: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt
+[2025-11-20 11:40:35,431][__main__][INFO] - [rank: 0] 检测到官方推理checkpoint，已自动转换键名
+[2025-11-20 11:40:35,431][__main__][INFO] - [rank: 0] ⚠️  注意：官方checkpoint不含EMA权重，将用模型权重初始化EMA
+[2025-11-20 11:40:35,523][__main__][INFO] - [rank: 0] 初始化EMA权重...
+[2025-11-20 11:40:35,571][__main__][INFO] - [rank: 0] ✅ Loaded checkpoint:
+[2025-11-20 11:40:35,572][__main__][INFO] - [rank: 0]    - Model weights missing: 0 keys
+[2025-11-20 11:40:35,572][__main__][INFO] - [rank: 0]    - EMA weights missing: 159 keys
+[2025-11-20 11:40:35,572][__main__][INFO] - [rank: 0]    - Other missing: 623 (optimizer states, etc.)
+[2025-11-20 11:41:01,983][__main__][INFO] - [rank: 0] 📌 Finetuning mode: ESM2 frozen, training only folding network
+[2025-11-20 11:41:01,984][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-20 11:41:02,015][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-20 11:41:02,015][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-20 11:41:02,019][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-20 11:41:02,019][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-20 11:41:02,020][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-20 11:41:02,023][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-20 11:41:03,082][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-20 11:41:03,156][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-20 11:45:01,208][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter_continue
+[2025-11-20 11:45:34,728][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-20 11:45:34,792][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-20 11:46:02,456][__main__][INFO] - [rank: 0] 🔄 Loading pretrained weights for finetuning: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt
+[2025-11-20 11:46:02,671][__main__][INFO] - [rank: 0] 检测到官方推理checkpoint，已自动转换键名
+[2025-11-20 11:46:02,672][__main__][INFO] - [rank: 0] ⚠️  注意：官方checkpoint不含EMA权重，将用模型权重初始化EMA
+[2025-11-20 11:46:02,736][__main__][INFO] - [rank: 0] 初始化EMA权重...
+[2025-11-20 11:46:02,760][__main__][INFO] - [rank: 0] ✅ Loaded checkpoint:
+[2025-11-20 11:46:02,761][__main__][INFO] - [rank: 0]    - Model weights missing: 0 keys
+[2025-11-20 11:46:02,761][__main__][INFO] - [rank: 0]    - EMA weights missing: 159 keys
+[2025-11-20 11:46:02,761][__main__][INFO] - [rank: 0]    - Other missing: 623 (optimizer states, etc.)
+[2025-11-20 11:46:29,154][__main__][INFO] - [rank: 0] 📌 Finetuning mode: ESM2 frozen, training only folding network
+[2025-11-20 11:46:29,154][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-20 11:46:29,184][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-20 11:46:29,185][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-20 11:46:29,188][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-20 11:46:29,189][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-20 11:46:29,189][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-20 11:46:29,193][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-20 11:46:30,506][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-20 11:46:30,582][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-21 07:16:10,389][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 187, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train.py", line 145, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1012, in _run
+    results = self._run_stage()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 1056, in _run_stage
+    self.fit_loop.run()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 216, in run
+    self.advance()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fit_loop.py", line 455, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 149, in run
+    self.on_run_start(data_fetcher)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/training_epoch_loop.py", line 241, in on_run_start
+    iter(data_fetcher)  # creates the iterator inside the fetcher
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fetchers.py", line 105, in __iter__
+    super().__iter__()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/loops/fetchers.py", line 52, in __iter__
+    self.iterator = iter(self.combined_loader)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/combined_loader.py", line 351, in __iter__
+    iter(iterator)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/combined_loader.py", line 92, in __iter__
+    super().__iter__()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/combined_loader.py", line 43, in __iter__
+    self.iterators = [iter(iterable) for iterable in self.iterables]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/utilities/combined_loader.py", line 43, in <listcomp>
+    self.iterators = [iter(iterable) for iterable in self.iterables]
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 491, in __iter__
+    return self._get_iterator()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 422, in _get_iterator
+    return _MultiProcessingDataLoaderIter(self)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1146, in __init__
+    w.start()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/multiprocessing/context.py", line 224, in _Popen
+    return _default_context.get_context().Process._Popen(process_obj)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/multiprocessing/context.py", line 281, in _Popen
+    return Popen(process_obj)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/multiprocessing/popen_fork.py", line 16, in __init__
+    util._flush_std_streams()
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/multiprocessing/util.py", line 439, in _flush_std_streams
+    sys.stderr.flush()
+OSError: [Errno 5] Input/output error
+[2025-11-21 07:16:10,407][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_filter_continue
+[2025-11-21 11:34:24,202][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-21 11:34:24,269][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-21 11:34:24,572][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi
+[2025-11-21 11:34:53,532][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-21 11:34:53,604][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-21 11:35:23,002][__main__][INFO] - [rank: 0] 🔄 Loading pretrained weights for finetuning: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt
+[2025-11-21 11:35:23,288][__main__][INFO] - [rank: 0] 检测到官方推理checkpoint，已自动转换键名
+[2025-11-21 11:35:23,288][__main__][INFO] - [rank: 0] ⚠️  注意：官方checkpoint不含EMA权重，将用模型权重初始化EMA
+[2025-11-21 11:35:23,392][__main__][INFO] - [rank: 0] 初始化EMA权重...
+[2025-11-21 11:35:23,500][__main__][INFO] - [rank: 0] ✅ Loaded checkpoint:
+[2025-11-21 11:35:23,501][__main__][INFO] - [rank: 0]    - Model weights missing: 0 keys
+[2025-11-21 11:35:23,501][__main__][INFO] - [rank: 0]    - EMA weights missing: 159 keys
+[2025-11-21 11:35:23,501][__main__][INFO] - [rank: 0]    - Other missing: 623 (optimizer states, etc.)
+[2025-11-21 11:35:51,019][__main__][INFO] - [rank: 0] 📌 Finetuning mode: ESM2 frozen, training only folding network
+[2025-11-21 11:35:51,020][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-21 11:35:51,965][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-21 11:35:51,965][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-21 11:35:51,970][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-21 11:35:51,971][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-21 11:35:51,971][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-21 11:35:51,975][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-21 11:35:52,980][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-21 11:35:53,056][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-21 11:39:02,974][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-21 11:39:03,039][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-21 11:39:33,751][__main__][INFO] - [rank: 0] 🔄 Loading pretrained weights for finetuning: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_old/simplefold_100M.ckpt
+[2025-11-21 11:39:34,036][__main__][INFO] - [rank: 0] 检测到官方推理checkpoint，已自动转换键名
+[2025-11-21 11:39:34,036][__main__][INFO] - [rank: 0] ⚠️  注意：官方checkpoint不含EMA权重，将用模型权重初始化EMA
+[2025-11-21 11:39:34,131][__main__][INFO] - [rank: 0] 初始化EMA权重...
+[2025-11-21 11:39:34,239][__main__][INFO] - [rank: 0] ✅ Loaded checkpoint:
+[2025-11-21 11:39:34,239][__main__][INFO] - [rank: 0]    - Model weights missing: 0 keys
+[2025-11-21 11:39:34,239][__main__][INFO] - [rank: 0]    - EMA weights missing: 159 keys
+[2025-11-21 11:39:34,239][__main__][INFO] - [rank: 0]    - Other missing: 623 (optimizer states, etc.)
+[2025-11-21 11:40:01,270][__main__][INFO] - [rank: 0] 📌 Finetuning mode: ESM2 frozen, training only folding network
+[2025-11-21 11:40:01,271][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-21 11:40:02,131][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-21 11:40:02,132][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-21 11:40:02,136][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-21 11:40:02,137][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-21 11:40:02,137][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-21 11:40:02,141][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-21 11:40:03,179][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-21 11:40:03,254][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-24 00:09:53,201][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_continue

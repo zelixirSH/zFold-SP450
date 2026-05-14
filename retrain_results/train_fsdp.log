@@ -1,0 +1,329 @@
+[2025-11-16 14:24:18,878][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 14:24:18,944][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 14:24:46,122][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-11-16 14:24:46,123][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 14:24:46,184][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 92, in _call_target
+    return _target_(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/datasets/train_datamodule.py", line 257, in __init__
+    manifest: Manifest = Manifest.load(path)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/boltz_data_pipeline/types.py", line 432, in load
+    with path.open("r") as f:
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: '/sugon_store/mahaohui/mahaohui/ml-simplefold/data/swissprot_token/manifest.json'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train_fsdp.py", line 53, in train
+    datamodule: LightningDataModule = hydra.utils.instantiate(cfg.data)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 226, in instantiate
+    return instantiate_node(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 347, in instantiate_node
+    return _call_target(_target_, partial, args, kwargs, full_key)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/hydra/_internal/instantiate/_instantiate2.py", line 97, in _call_target
+    raise InstantiationException(msg) from e
+hydra.errors.InstantiationException: Error in call to target 'datasets.train_datamodule.SimpleFoldTrainingDataModule':
+FileNotFoundError(2, 'No such file or directory')
+full_key: data
+[2025-11-16 14:24:46,211][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-11-16 16:51:14,293][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 16:51:14,360][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 16:51:20,580][utils.utils][INFO] - [rank: 0] Output dir: ./artifacts/
+[2025-11-16 17:07:08,325][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 17:12:32,809][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 17:12:32,877][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 17:13:02,279][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-11-16 17:13:02,280][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 17:13:02,338][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 17:13:02,338][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 17:13:02,342][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 17:13:02,342][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 17:13:02,342][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 17:13:02,346][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 17:13:03,774][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 17:13:03,844][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 17:14:07,842][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train_fsdp.py", line 105, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 974, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 107, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 198, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/datasets/train_datamodule.py", line 367, in setup
+    raise RuntimeError(
+RuntimeError: Batch size (8) is not divisible by the number of devices (6).
+[2025-11-16 17:14:07,844][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 17:14:54,434][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 17:14:54,500][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 17:15:23,631][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-11-16 17:15:23,632][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 17:15:23,690][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 17:15:23,690][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 17:15:23,694][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 17:15:23,695][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 17:15:23,695][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 17:15:23,698][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 17:15:24,714][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 17:15:24,790][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 17:21:15,899][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 17:21:15,963][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 17:21:44,848][__main__][INFO] - [rank: 0] Resuming from checkpoint </sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts/simplefold_100M.ckpt>...
+[2025-11-16 17:21:44,849][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 17:21:44,898][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 17:21:44,898][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 17:21:44,902][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 17:21:44,902][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 17:21:44,903][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 17:21:44,906][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 17:21:45,816][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 17:21:45,886][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 17:22:55,324][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train_fsdp.py", line 105, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 999, in _run
+    self._checkpoint_connector._restore_modules_and_callbacks(ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 408, in _restore_modules_and_callbacks
+    self.resume_start(checkpoint_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/connectors/checkpoint_connector.py", line 83, in resume_start
+    loaded_checkpoint = self.trainer.strategy.load_checkpoint(checkpoint_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/fsdp.py", line 630, in load_checkpoint
+    checkpoint.pop("state_dict"),
+KeyError: 'state_dict'
+[2025-11-16 17:22:55,339][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 17:30:43,262][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 17:30:43,326][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 17:31:12,836][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 17:31:12,890][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 17:31:12,890][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 17:31:12,894][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 17:31:12,895][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 17:31:12,895][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 17:31:12,898][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 17:31:13,861][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 17:31:13,933][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 17:36:58,047][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 17:40:16,613][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 17:40:16,676][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 17:40:46,209][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 17:40:46,259][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 17:40:46,260][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 17:40:46,263][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 17:40:46,264][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 17:40:46,264][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 17:40:46,267][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 17:40:47,219][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 17:40:47,290][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 17:44:17,717][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 17:46:55,699][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 17:46:55,792][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 17:47:11,769][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 17:47:55,217][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 17:47:55,293][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 17:48:28,876][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 17:48:28,934][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 17:48:28,934][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 17:48:28,939][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 17:48:28,940][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 17:48:28,940][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 17:48:28,944][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 17:48:30,271][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 17:48:30,358][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 17:56:53,163][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 18:17:03,868][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 18:17:03,933][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 18:17:36,537][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 18:17:36,591][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 18:17:36,591][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 18:17:36,596][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 18:17:36,597][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 18:17:36,597][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 18:17:36,601][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 18:17:37,700][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 18:17:37,791][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 18:19:10,111][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 18:20:57,520][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 18:20:57,615][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 18:21:30,469][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 18:21:30,520][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 18:21:30,521][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 18:21:30,525][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 18:21:30,525][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 18:21:30,526][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 18:21:30,529][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 18:21:31,460][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 18:21:31,543][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 18:31:14,711][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 21:46:55,792][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 21:46:55,904][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 21:47:21,568][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 21:47:21,932][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 21:47:21,932][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 21:47:21,994][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 21:47:21,994][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 21:47:21,995][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 21:47:22,062][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 21:47:22,842][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 21:47:24,610][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 21:48:53,283][utils.utils][ERROR] - [rank: 0] 
+Traceback (most recent call last):
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/utils/utils.py", line 185, in wrap
+    task_func(cfg=cfg)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/train_fsdp.py", line 105, in train
+    trainer.fit(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 561, in fit
+    call._call_and_handle_interrupt(
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 47, in _call_and_handle_interrupt
+    return trainer.strategy.launcher.launch(trainer_fn, *args, trainer=trainer, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/strategies/launchers/subprocess_script.py", line 105, in launch
+    return function(*args, **kwargs)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 599, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/trainer.py", line 974, in _run
+    call._call_setup_hook(self)  # allow user to set up LightningModule in accelerator environment
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 107, in _call_setup_hook
+    _call_lightning_datamodule_hook(trainer, "setup", stage=fn)
+  File "/sugon_store/mahaohui/miniconda3/envs/simplefold/lib/python3.10/site-packages/lightning/pytorch/trainer/call.py", line 198, in _call_lightning_datamodule_hook
+    return fn(*args, **kwargs)
+  File "/sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/src/simplefold/datasets/train_datamodule.py", line 367, in setup
+    raise RuntimeError(
+RuntimeError: Batch size (4) is not divisible by the number of devices (6).
+[2025-11-16 21:48:53,527][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal
+[2025-11-16 21:50:32,949][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 21:50:33,064][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 21:50:57,631][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 21:50:57,829][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 21:50:57,829][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 21:50:57,866][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 21:50:57,867][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 21:50:57,867][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 21:50:57,874][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 21:50:58,333][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 21:50:59,334][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 22:57:38,576][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-16 22:57:38,941][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-16 22:58:30,563][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-16 22:58:32,955][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-16 22:58:32,956][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-16 22:58:33,070][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-16 22:58:33,071][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-16 22:58:33,072][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-16 22:58:33,136][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-16 22:58:34,909][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-16 22:58:36,795][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-16 23:19:19,618][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_af
+[2025-11-17 10:21:52,648][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-17 10:21:52,730][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-17 10:22:16,166][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-17 10:22:16,242][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-17 10:22:16,242][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-17 10:22:16,254][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-17 10:22:16,254][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-17 10:22:16,254][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-17 10:22:16,262][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-17 10:22:16,640][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-17 10:22:17,098][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-17 10:50:14,205][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq
+[2025-11-17 10:52:58,966][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-17 10:52:59,031][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-17 10:53:12,083][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq
+[2025-11-17 10:53:30,631][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-17 10:53:30,694][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-17 10:53:55,798][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-17 10:53:55,893][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-17 10:53:55,894][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-17 10:53:55,898][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-17 10:53:55,898][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-17 10:53:55,899][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-17 10:53:55,902][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-17 10:53:56,791][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-17 10:53:56,870][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-17 11:21:55,520][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq
+[2025-11-17 11:23:13,441][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-17 11:23:13,501][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-17 11:23:40,775][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-17 11:23:40,819][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-17 11:23:40,820][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-17 11:23:40,823][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-17 11:23:40,824][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-17 11:23:40,824][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-17 11:23:40,843][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-17 11:23:42,075][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-17 11:23:42,149][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-17 15:55:41,976][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9
+[2025-11-17 16:48:59,035][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-17 16:48:59,101][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-17 16:49:28,710][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-17 16:49:30,055][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-17 16:49:30,056][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-17 16:49:30,060][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-17 16:49:30,060][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-17 16:49:30,061][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-17 16:49:30,064][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-17 16:49:31,543][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-17 16:49:31,617][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-17 16:51:36,338][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_af
+[2025-11-17 16:52:57,355][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-17 16:52:57,426][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-17 16:53:25,750][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-17 16:53:27,047][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-17 16:53:27,047][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-17 16:53:27,051][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-17 16:53:27,051][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-17 16:53:27,051][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-17 16:53:27,054][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-17 16:53:28,574][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-17 16:53:28,651][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-18 15:01:04,885][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 15:01:04,952][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 15:01:35,100][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-18 15:01:35,145][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-18 15:01:35,145][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-18 15:01:35,149][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-18 15:01:35,149][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-18 15:01:35,150][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-18 15:01:35,166][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-18 15:01:36,227][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-18 15:01:36,299][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-18 15:06:02,100][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-18 15:06:20,052][utils.utils][INFO] - [rank: 0] Printing config tree with Rich! <cfg.extras.print_config=True>
+[2025-11-18 15:06:20,118][__main__][INFO] - [rank: 0] Instantiating model <model.simplefold.SimpleFold>
+[2025-11-18 15:06:52,112][__main__][INFO] - [rank: 0] Instantiating datamodule <datasets.train_datamodule.SimpleFoldTrainingDataModule>
+[2025-11-18 15:06:52,155][__main__][INFO] - [rank: 0] Instantiating callbacks...
+[2025-11-18 15:06:52,155][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.ModelCheckpoint>
+[2025-11-18 15:06:52,159][utils.instantiators][INFO] - [rank: 0] Instantiating callback <lightning.pytorch.callbacks.RichModelSummary>
+[2025-11-18 15:06:52,159][__main__][INFO] - [rank: 0] Instantiating loggers...
+[2025-11-18 15:06:52,160][utils.instantiators][INFO] - [rank: 0] Instantiating logger <lightning.pytorch.loggers.tensorboard.TensorBoardLogger>
+[2025-11-18 15:06:52,163][__main__][INFO] - [rank: 0] Instantiating trainer <lightning.pytorch.trainer.Trainer>
+[2025-11-18 15:06:53,479][__main__][INFO] - [rank: 0] Logging hyperparameters!
+[2025-11-18 15:06:53,556][__main__][INFO] - [rank: 0] Starting training!
+[2025-11-18 15:12:01,742][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_cystal_mmseq0.9_default
+[2025-11-19 10:32:49,342][utils.utils][INFO] - [rank: 0] Output dir: /sugon_store/mahaohui/mahaohui/pocket_generation/ml-simplefold/artifacts_p450_fungi_af
